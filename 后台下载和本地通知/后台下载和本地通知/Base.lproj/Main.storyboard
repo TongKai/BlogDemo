@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4m-CD-1lz">
+                                <rect key="frame" x="20" y="311" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="L1z-n2-S01"/>
+                                    <constraint firstAttribute="height" constant="30" id="URu-L8-2tn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="88Y-Ei-kW5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6E-o7-iDQ">
+                                <rect key="frame" x="137" y="311" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="8AB-JB-qZi"/>
+                                    <constraint firstAttribute="height" constant="30" id="k6N-WF-nrw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="中断"/>
+                                <connections>
+                                    <action selector="pauseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="68b-Ag-VCa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoE-MB-g07">
+                                <rect key="frame" x="254" y="311" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="恢复"/>
+                                <connections>
+                                    <action selector="resumeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nlx-zv-lIp"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGM-eh-9uE">
+                                <rect key="frame" x="20" y="239" width="280" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="Lqm-3t-Cxx"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D4m-CD-1lz" firstAttribute="top" secondItem="AGM-eh-9uE" secondAttribute="bottom" constant="70" id="0ak-a1-ePg"/>
+                            <constraint firstItem="AGM-eh-9uE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6sU-Qh-acW"/>
+                            <constraint firstItem="AGM-eh-9uE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W4E-xP-Gcm"/>
+                            <constraint firstItem="PoE-MB-g07" firstAttribute="top" secondItem="AGM-eh-9uE" secondAttribute="bottom" constant="70" id="Ys1-41-s01"/>
+                            <constraint firstItem="AGM-eh-9uE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aP6-If-yeo"/>
+                            <constraint firstItem="w6E-o7-iDQ" firstAttribute="top" secondItem="AGM-eh-9uE" secondAttribute="bottom" constant="70" id="bAY-6S-W0b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PoE-MB-g07" secondAttribute="trailing" id="d1n-XK-ynU"/>
+                            <constraint firstItem="w6E-o7-iDQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gU3-Sh-4bZ"/>
+                            <constraint firstItem="AGM-eh-9uE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m4Y-XD-MRA"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="D4m-CD-1lz" secondAttribute="leading" id="ymz-g6-8va"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="progressView" destination="AGM-eh-9uE" id="K3t-Cv-Kug"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="206"/>
+        </scene>
+    </scenes>
+</document>
